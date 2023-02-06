@@ -3,6 +3,15 @@
       <div class="slds-m-around_medium">
         <p>Hello, {greeting}!</p>
         <lightning-input label="Name" value={greeting} onchange={changeHandler}></lightning-input>
+
+        <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+        <lightning-record-edit-form object-api-name="Account"> </lightning-record-edit-form>
+          <lightning-record-edit-form> </lightning-record-edit-form>
+          <lightning-input-field field-name="Name"> </lightning-input-field>
+          <lightning-input-field field-name="phone"> </lightning-input-field>
+          <lightning-input-field field-name="Address"> </lightning-input-field>
+
+        </div>
       </div>
     </lightning-card>
   </template>

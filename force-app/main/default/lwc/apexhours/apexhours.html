@@ -1,0 +1,56 @@
+<template>
+    <lightning-card variant="Narrow" title="My LWC" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <p>Hello, {greeting}</p>
+            <lightning-input label="Name" value={greeting} onchange={changeHandler}></lightning-input>
+
+            <p>Hello, {greeting}</p>
+            <lightning-badge label="Alpha"></lightning-badge>
+            <lightning-badge label="Beta"></lightning-badge>
+            <lightning-badge label="Gamma"></lightning-badge>
+            </br>
+            </br>
+            <lightning-button variant="brand" label="Brand1" onclick={handleClick} class="slds-m-left_x-small">
+            </lightning-button></br></br>
+            <lightning-button-group>
+                <lightning-button label="Refresh"></lightning-button>
+                <lightning-button label="Edit"></lightning-button>
+                <lightning-button label="Save"></lightning-button>
+                <lightning-button-icon-stateful icon-name="utility:like" selected={likeState}
+                    onclick={handleLikeButtonClick} alternative-text="like"> </lightning-button-icon-stateful>
+                <lightning-button-icon-stateful icon-name="utility:answer" onclick={handleLikeButtonClick}>
+                </lightning-button-icon-stateful>
+            </lightning-button-group>
+
+            </br>
+            <div class="slds-m-vertical_medium">
+                <p>The label of the button that was clicked is: <span class="slds-text-heading_small">{clickedButtonLabel}</span></p>
+
+                <template for:each={result} for:item="contact">
+                    <lightning-card variant="Narrow" key={contact.id} title="My Contacts"   icon-name="standard:contact"></lightning-card>
+                    <p key={contact.id}>
+
+                        {contact.Id }
+
+                    </p>
+                    <p key={contact.name}>
+                        {contact.Name }
+                    </p>
+                    <p key={contact.email}>
+                        {contact.Email }
+                    </p>
+    </lightning-card>
+</template>
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+</lightning-card>
+</template>
